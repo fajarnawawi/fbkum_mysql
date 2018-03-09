@@ -1,5 +1,5 @@
 #Overwrite kolom CTR (gunakan saat mengulang proses)
-ALTER TABLE fbkum.insight DROP COLUMN CTR;
+#ALTER TABLE fbkum.insight DROP COLUMN CTR;
 
 #Menambahkan kolom CTR di tabel
 ALTER TABLE fbkum.insight ADD COLUMN CTR float4;
@@ -16,6 +16,7 @@ SET CTR = `Lifetime Post Consumptions by type - link clicks`/`Lifetime Post Orga
 WHERE CTR is null;
 
 #Membuat tabel baru untuk webscraping
+DROP TABLE fbkum.export;
 CREATE TABLE fbkum.export
 SELECT Permalink
 FROM fbkum.insight
