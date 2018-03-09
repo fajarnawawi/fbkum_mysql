@@ -1,3 +1,5 @@
+DROP TABLE fbkum.final;
+
 #Pivot Tabel mengombinasikan tabel export dan title
 CREATE TABLE fbkum.final
 SELECT `web-scraper-start-url`, title
